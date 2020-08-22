@@ -18,3 +18,5 @@ julia> x
 2
 ```
 Also supported are `@exfiltrate VAR`, which exfiltrates the local variables to the global variable `VAR` as a named tuple, `@exfiltrate VAR x`, which exfiltrates only `x`, and the `@exfiltrate_push! ARR` and `@exfiltrate_push! ARR x` which push the exfiltrated variables to a global array.
+
+You can avoid typing `using Exfiltrator` by `using` it at the REPL and then using `Main.@exfiltrate` in your code.
