@@ -17,4 +17,6 @@ using Test
     @test C == [2, 3]
     @test D[1].x == 2
     @test D[2].x == 3
+    f(:a)
+    @test x == :a
 end

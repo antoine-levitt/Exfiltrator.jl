@@ -1,7 +1,7 @@
 name = "Exfiltrator"
 uuid = "8fb92a4a-34c4-45cc-956f-769d12f66c92"
 authors = ["Antoine Levitt <antoine.levitt@gmail.com> and contributors"]
-version = "0.1.0"
+version = "0.1.1"
 
 [compat]
 julia = "1.1"
