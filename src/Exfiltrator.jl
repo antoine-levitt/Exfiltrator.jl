@@ -2,12 +2,16 @@ module Exfiltrator
 
 export @exfiltrate, @exfiltrate_push!
 
+function exfiltrate(bindings)
+    for (var, val) in bindings
+        setfield!!(Main, var, val)
+    end
+end
+
 setfield!!(m::Module, var::Symbol, val::Any) = m.eval(:($var = $(Expr(:quote, val))))
 macro exfiltrate()
     quote
-        for (var, val) in Base.@locals
-            setfield!!(Main, var, val)
-        end
+        exfiltrate(Base.@locals)
     end
 end
 macro exfiltrate(s::Symbol)
