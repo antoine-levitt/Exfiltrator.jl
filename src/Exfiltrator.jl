@@ -2,7 +2,7 @@ module Exfiltrator
 
 export @exfiltrate, @exfiltrate_push!
 
-setfield!!(m::Module, var::Symbol, val::Any) = m.eval(:($var = $val))
+setfield!!(m::Module, var::Symbol, val::Any) = m.eval(:($var = $(Expr(:quote, val))))
 macro exfiltrate()
     quote
         for (var, val) in Base.@locals
