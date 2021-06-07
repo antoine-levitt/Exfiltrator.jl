@@ -1,3 +1,7 @@
+# THIS PACKAGE IS NOT MAINTAINED
+
+Similar functionality has been implemented in [Infiltrator.jl](https://github.com/JuliaDebug/Infiltrator.jl). Please use that package instead of Exfiltrator.jl.
+
 # Exfiltrator
 
 [![Build Status](https://travis-ci.com/antoine-levitt/Exfiltrator.jl.svg?branch=master)](https://travis-ci.com/antoine-levitt/Exfiltrator.jl)
